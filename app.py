@@ -16,7 +16,7 @@ def home():
 @app.route('/', methods=['POST'])
 def send():
 	# TODO: input validation
-	# TOD: https://www.twilio.com/blog/2012/08/build-a-scheduled-reminder-app-with-twilio-and-ironworker.html
+	# TODO: https://www.twilio.com/blog/2012/08/build-a-scheduled-reminder-app-with-twilio-and-ironworker.html
 	phone = request.form.get('phone').strip()
 	message = request.form.get('message').strip()
 	response = twilio.messages.create(body=message, to=phone, from_='+1646-480-2597')
